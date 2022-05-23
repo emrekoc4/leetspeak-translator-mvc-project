@@ -9,6 +9,7 @@
     <ul class="navbar-nav ml-auto">
         <div class="topbar-divider d-none d-sm-block"></div>
         <!-- Nav Item - User Information -->
+        <li><a class="dropdown-item" asp-controller="User" asp-action="UserIndex">Search</a></li>
         <li><a class="dropdown-item" asp-controller="User" asp-action="UpdateUser">Edit Profile</a></li>
         <li><a class="dropdown-item" asp-controller="Home" asp-action="LogOut" asp-route-returnUrl="/Home/LogIn">Logout</a></li>
     </ul>

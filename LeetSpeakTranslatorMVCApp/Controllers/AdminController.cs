@@ -158,9 +158,14 @@ namespace LeetSpeakTranslatorMVCApp.Controllers
 
         public async Task<IdentityResult> DeleteUserById(string userId)
         {
-            if (_userContentsService.GetByUserId(userId) != null)
+            UserContentsDto userContentsDto = new UserContentsDto();
+            userContentsDto.UserId = userId;
+            if (_userContentsService.GetList().ToList().Where(x => x.UserId == userId).Any())
             {
-                _userContentsService.Delete(_userContentsService.GetByUserId(userId));
+                foreach (var item in _userContentsService.GetList().ToList().Where(x => x.UserId == userId))
+                {
+                    _userContentsService.Delete(item);
+                }
             }
             AppUser user = GetUser(userId);
             IdentityResult result = await _userManager.DeleteAsync(user);

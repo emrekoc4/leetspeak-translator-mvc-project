@@ -10,3 +10,15 @@ D:\ornek\LeetSpeakTranslatorMVCApp\Core\obj\Debug\net5.0\Core.dll
 D:\ornek\LeetSpeakTranslatorMVCApp\Core\obj\Debug\net5.0\refint\Core.dll
 D:\ornek\LeetSpeakTranslatorMVCApp\Core\obj\Debug\net5.0\Core.pdb
 D:\ornek\LeetSpeakTranslatorMVCApp\Core\obj\Debug\net5.0\ref\Core.dll
+D:\Documents\GitHub\leetspeak-translator-mvc-project\Core\bin\Debug\net5.0\Core.deps.json
+D:\Documents\GitHub\leetspeak-translator-mvc-project\Core\bin\Debug\net5.0\Core.dll
+D:\Documents\GitHub\leetspeak-translator-mvc-project\Core\bin\Debug\net5.0\Core.pdb
+D:\Documents\GitHub\leetspeak-translator-mvc-project\Core\obj\Debug\net5.0\Core.csproj.AssemblyReference.cache
+D:\Documents\GitHub\leetspeak-translator-mvc-project\Core\obj\Debug\net5.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\GitHub\leetspeak-translator-mvc-project\Core\obj\Debug\net5.0\Core.AssemblyInfoInputs.cache
+D:\Documents\GitHub\leetspeak-translator-mvc-project\Core\obj\Debug\net5.0\Core.AssemblyInfo.cs
+D:\Documents\GitHub\leetspeak-translator-mvc-project\Core\obj\Debug\net5.0\Core.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\leetspeak-translator-mvc-project\Core\obj\Debug\net5.0\Core.dll
+D:\Documents\GitHub\leetspeak-translator-mvc-project\Core\obj\Debug\net5.0\refint\Core.dll
+D:\Documents\GitHub\leetspeak-translator-mvc-project\Core\obj\Debug\net5.0\Core.pdb
+D:\Documents\GitHub\leetspeak-translator-mvc-project\Core\obj\Debug\net5.0\ref\Core.dll

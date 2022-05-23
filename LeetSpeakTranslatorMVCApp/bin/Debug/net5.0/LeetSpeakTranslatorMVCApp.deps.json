@@ -355,21 +355,6 @@
           }
         }
       },
-      "Mapster/5.3.2": {
-        "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
-          "System.Reflection.Emit": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Mapster.dll": {
-            "assemblyVersion": "5.3.2.0",
-            "fileVersion": "5.3.2.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/Mapster.dll": {}
-        }
-      },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Core": "2.2.0",
@@ -2379,7 +2364,6 @@
           "Autofac": "5.2.0",
           "DataAccess": "1.0.0",
           "Entities": "1.0.0",
-          "Mapster": "5.3.2",
           "Microsoft.AspNetCore.Identity": "2.2.0"
         },
         "runtime": {
@@ -4098,13 +4082,6 @@
       "sha512": "sha512-rsYXB7+iUPP8AHgQ8JP2UZI2xK2KhjcdGr9E6zX3CsZaTLCaw8M35vaAJRo1rfxeaZEVMuXeaquLVCkZ7JcZ5Q==",
       "path": "humanizer.core/2.2.0",
       "hashPath": "humanizer.core.2.2.0.nupkg.sha512"
-    },
-    "Mapster/5.3.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-DCx8X468fJ33+KAq+JkLkMLm1c7BSkThVhye020MhSlyYGlX4ju4iavIeTLvma5IJpu+F5PDwSI/l+UT2QA7NQ==",
-      "path": "mapster/5.3.2",
-      "hashPath": "mapster.5.3.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "type": "package",
