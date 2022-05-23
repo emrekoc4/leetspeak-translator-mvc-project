@@ -70,27 +70,30 @@ namespace LeetSpeakTranslatorMVCApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                Microsoft.AspNetCore.Identity.SignInResult result = await _userService.LogIn(userLoginVM);
-                if (result.Succeeded)
+                if (_userManager.Users.Where(x => x.UserName == userLoginVM.UserName).ToList().Any())
                 {
-                    AppUser user = await _userManager.FindByNameAsync(userLoginVM.UserName);
-                    IList<string> roles = await _userManager.GetRolesAsync(user);
+                    Microsoft.AspNetCore.Identity.SignInResult result = await _userService.LogIn(userLoginVM);
+                    if (result.Succeeded)
+                    {
+                        AppUser user = await _userManager.FindByNameAsync(userLoginVM.UserName);
+                        IList<string> roles = await _userManager.GetRolesAsync(user);
 
-                    if (roles.Contains("Admin"))
-                    {
-                        if (TempData["ReturnUrl"] != null)
+                        if (roles.Contains("Admin"))
                         {
-                            return Redirect(TempData["ReturnUrl"].ToString());
+                            if (TempData["ReturnUrl"] != null)
+                            {
+                                return Redirect(TempData["ReturnUrl"].ToString());
+                            }
+                            return RedirectToAction("AllSearchHistoryWithUsers", "Admin");
                         }
-                        return RedirectToAction("AllSearchHistoryWithUsers", "Admin");
-                    }
-                    else
-                    {
-                        if (TempData["ReturnUrl"] != null)
+                        else
                         {
-                            return Redirect(TempData["ReturnUrl"].ToString());
+                            if (TempData["ReturnUrl"] != null)
+                            {
+                                return Redirect(TempData["ReturnUrl"].ToString());
+                            }
+                            return RedirectToAction("UserIndex", "User");
                         }
-                        return RedirectToAction("UserIndex", "User");
                     }
                 }
                 else
