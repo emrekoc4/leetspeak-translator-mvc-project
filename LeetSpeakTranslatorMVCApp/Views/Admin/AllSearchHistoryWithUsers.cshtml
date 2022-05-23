@@ -1,0 +1,65 @@
+﻿@using Entities.ViewModels
+@model List<UserContentListVM>
+@{
+    ViewData["Title"] = "Search History With Users";
+     Layout = "~/Views/Shared/WebGridLayout/_AdminLayout.cshtml";
+}
+
+<h1>Search History With Users</h1>
+
+<link href="~/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Search History</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>UserName</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Translated</th>
+                        <th>Text</th>
+                        <th>Translation</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>UserName</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Translated</th>
+                        <th>Text</th>
+                        <th>Translation</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.UserName</td>
+                            <td>@item.FirstName</td>
+                            <td>@item.LastName</td>
+                            <td>@item.Translated</td>
+                            <td>@item.Text</td>
+                            <td>@item.Translation</td>
+                            <td><a href="/User/UpdateUser?userName=@item.UserName" class="btn btn-primary" />Edit User's Profile</td>
+                            <td><a href="/Admin/DeleteUser?userId=@item.UserId" class="btn btn-success" />Delete The User</td>
+                            <td><a href="/User/DeleteContent?contentId=@item.ContentId" class="btn btn-warning" />Delete The Search</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

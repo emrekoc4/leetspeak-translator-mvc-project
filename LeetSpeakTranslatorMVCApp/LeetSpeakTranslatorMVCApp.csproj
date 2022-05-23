@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\HomeRoot\js\" />
+    <Folder Include="wwwroot\HomeRoot\lib\" />
+    <Folder Include="wwwroot\HomeRoot\vendor\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\WebGrid\lib\" />
+  </ItemGroup>
+
+</Project>

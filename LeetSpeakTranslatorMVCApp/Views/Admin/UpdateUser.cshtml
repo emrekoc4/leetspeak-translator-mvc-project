@@ -1,0 +1,94 @@
+﻿@model Entities.ViewModels.UpdateUserVM
+
+@{
+    ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/HomeLayout/_Login.cshtml";
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/HomeRoot/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/HomeRoot/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/HomeRoot/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/HomeRoot/css/style.css">
+
+    <title>Update Your Profile</title>
+</head>
+<body>
+
+
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <a asp-controller="Home" asp-action="Index"><img src="~/HomeRoot/img/register.jpg" alt="Image" class="img-fluid"></a>
+
+                </div>
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="mb-4">
+                                <p class="mb-4">Type Your Profile Details Please</p>
+                            </div>
+                            <form asp-controller="Admin" asp-action="UpdateUser" method="post">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-group last mb-4">
+                                    <label asp-for="CurrentUserName">Current UserName</label>
+                                    <input asp-for="CurrentUserName" class="form-control">
+                                    <span asp-validation-for="CurrentUserName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group last mb-4">
+                                    <label asp-for="CurrentPassword">Current Password</label>
+                                    <input asp-for="CurrentPassword" class="form-control" type="password">
+                                    <span asp-validation-for="CurrentPassword" class="text-danger"></span>
+                                </div>
+                                 <div class="form-group last mb-4">
+                                    <label asp-for="NewUserName">NewUserName</label>
+                                    <input asp-for="NewUserName" class="form-control">
+                                    <span asp-validation-for="NewUserName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group first">
+                                    <label asp-for="FirstName">FirstName</label>
+                                    <input asp-for="FirstName" class="form-control">
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group first">
+                                    <label asp-for="LastName">LastName</label>
+                                    <input asp-for="LastName" class="form-control">
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group last mb-4">
+                                    <label asp-for="NewPassword">New Password</label>
+                                    <input asp-for="NewPassword" class="form-control" type="password">
+                                    <span asp-validation-for="NewPassword" class="text-danger"></span>
+                                </div>
+                                <div class="form-group last mb-4">
+                                    <label asp-for="Photo" class="control-label"></label>
+                                    <div class="custom-file">
+                                        <input asp-for="Photo" class="custom-file-input" id="customFile" filtertype />
+                                        <label class="custom-file-label" for="customFile">Choose File</label>
+                                    </div>
+                                    <span asp-validation-for="Photo" class="text-danger"></span>
+                                </div>
+                                <input type="submit" value="Update" class="btn btn-block btn-primary">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

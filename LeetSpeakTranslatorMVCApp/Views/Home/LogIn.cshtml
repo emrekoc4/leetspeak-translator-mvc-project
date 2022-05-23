@@ -1,0 +1,65 @@
+﻿@model Entities.ViewModels.UserLoginVM
+@{
+    ViewData["Title"] = "LogIn";
+    Layout = "~/Views/Shared/HomeLayout/_Login.cshtml";
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/HomeRoot/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/HomeRoot/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/HomeRoot/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/HomeRoot/css/style.css">
+
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <a asp-controller="Home" asp-action="LogIn"><img src="~/HomeRoot/img/undraw_remotely_2j6y.svg" alt="Image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="mb-4">
+                                <h3>LOGIN</h3>
+                                <p class="mb-4">Please Type Your Informations</p>
+                            </div>
+                            <form asp-controller="Home" asp-action="LogIn" method="post">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-group first">
+                                    <label asp-for="UserName">UserName</label>
+                                    <input asp-for="UserName" class="form-control">
+                                    <span asp-validation-for="UserName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group last mb-4">
+                                    <label asp-for="Password">Password</label>
+                                    <input asp-for="Password" class="form-control" type="password">
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                                <div>
+                                    <span class="ml-auto"><a asp-controller="Home" asp-action="ResetPassword" class="forgot-pass">Forgot My Password?</a></span>
+                                </div>
+                                <input type="submit" value="Log In" class="btn btn-block btn-primary">
+                                <a class="btn btn-block btn-outline-primary" asp-controller="Home" asp-action="SignUp">To Create An Account =>></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
